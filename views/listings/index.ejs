@@ -1,0 +1,104 @@
+<% layout("/layouts/boilerplate") -%>
+<style>
+  .filters{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+  .filter{
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  .filter:hover{
+    opacity: 1;
+  }
+  .tax-info{
+    display: none;
+  }
+
+  .tax-toggle{
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 1rem;
+    margin-left: 3rem;
+    }
+  
+
+
+</style>
+  <div class="filters">
+        <div class="filter">
+          <div><i class="fa-solid fa-fire"></i></div>
+          <p>Trending</p>
+        </div>
+        <div class="filter">
+          <div><i class="fa-solid fa-bed"></i></div>
+          <p>Rooms</p>
+        </div>
+        <div class="filter">
+          <div><i class="fa-solid fa-campground"></i></div>
+          <p>Camping</p>
+        </div>
+        <div class="filter">
+          <div><i class="fa-solid fa-mountain-city"></i></div>
+          <p>Iconic cities</p>
+        </div>
+         <div class="filter">
+          <div><i class="fa-solid fa-mountain"></i></div>
+          <p>Mounatins</p>
+        </div>
+        <div class="filter">
+          <div><i class="fa-solid fa-chess-rook"></i></div>
+          <p>castles</p>
+        </div>
+        <div class="filter">
+          <div><i class="fa-solid fa-snowflake"></i></div>
+          <p>Arctic </p>
+        </div>
+         <div class="filter">
+          <div><i class="fa-solid fa-tractor"></i></div>
+          <p>Farms</p>
+        </div> 
+
+        <div class="tax-toggle">
+            <div class="form-check-reverse form-switch">
+               <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+               <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+            </div>
+        </div>
+  </div>
+<div class="maincard mt-3">
+    <%for(data of alldata) { %>
+        <a href="/listings/<%= data._id %>" class="listing-link">
+        <div class="card card-hover listing-card" >
+            <img src="<%= data.image.url %>" class="card-img-top" alt="listing-img" >
+            <div class="card-body">
+              <p>
+                <b><%=data.title %></b>
+                <br>
+                &#8377; <%=data.price.toLocaleString("en-IN") %> /night
+                <i class="tax-info">&nbsp; &nbsp; +18% GST</i>
+              </p>
+            </div>
+        </div>
+        </a>
+    <% } %>
+</div>
+
+<script>
+  let taxTooggle=document.querySelector("#switchCheckDefault");
+  let taxinfo=document.querySelectorAll(".tax-info");
+  taxTooggle.addEventListener("click",()=>{
+    for(info of taxinfo){
+        info.classList.toggle("tax-info");
+    }
+  })
+</script>

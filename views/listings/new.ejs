@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <h3 class="offset-2"> Create your listings</h3>
+     <div class="row offset-2">
+        <div class="col-9">
+    <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data" >
+        <div class="mb-3">
+                <label for="tittle" class="form-label">Title</label>
+                <input type="text" name="listing[title]" placeholder="Add a title" class="form-control" required>
+                <div class="invalid-feedback"> please enter a suitable title</div>
+                
+        </div>
+        <div class="mb-3">
+                <label for="description" class="form-label">description</label> 
+                <textarea type="text" name="listing[description]" placeholder="description" class="form-control" required></textarea>
+             <div class="invalid-feedback"> please enter a short description</div>
+        </div>
+        <div class="mb-3">
+                <label for="location" class="form-label">location</label>
+                <input type="text" name="listing[location]" placeholder="jaipur,rajasthan" class="form-control" required>
+               <div class="invalid-feedback"> please enter the location</div>
+            </div>
+        <div class="row">
+            <div class="mb-3 col-md-4  ">
+                <label for="price" class="form-label">price</label>
+                <input type="text" name="listing[price]" placeholder="1200" class="form-control" required>
+                <div class="invalid-feedback"> please enter the correct price</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">country</label>
+                <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                <div class="invalid-feedback"> please enter the Country name </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label"> Upload listings image</label>
+            <input type="file" name="listing[image]" class="form-control" required>
+        </div>
+
+        <button class="btn btn-dark addbtn ">Add</button>
+    </form>
+    </div>
+    </div>
+</body>

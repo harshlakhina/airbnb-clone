@@ -1,0 +1,95 @@
+/* navbar */
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content-box{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+    font-weight: 500;
+}
+.airbnb{
+    font-size: 2rem;
+    color: #fe424d;
+}   
+
+/* footer */
+.f-terms a{
+    text-decoration: none;
+    color: black;
+}
+.f-terms a:hover{
+    text-decoration: underline;
+}
+.f-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.f-social i{
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* cards */
+.maincard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.card-img-top{
+    height: 20rem;
+    width: 100%;
+    border-radius: 1rem !important;
+}
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    height: 18rem;
+    width: 22rem;
+}
+.card-body{
+    padding: 0 !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+
+.card-hover:hover{
+    opacity: 0.8;
+}
+
+/*new page */
+.addbtn{
+    background-color:#fe424d !important;
+    color: black;
+    border: none !important;
+}
+
+/* Edit page */
+.editbtn{
+      background-color: #fe424d !important;
+      color: black;
+      border: none !important;
+}
+
+/* show page */
+.btns{
+    display: flex;
+}
+
+/* map styling */
+#map{
+    height:400px;
+    width: 90vh;
+}

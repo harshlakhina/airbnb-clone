@@ -1,4 +1,3 @@
-/* navbar */
 body{
     font-family: "Plus Jakarta Sans", sans-serif !important;
     display: flex;
@@ -8,6 +7,14 @@ body{
 .content-box{
     flex: 1;
 }
+
+.show-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* navbar */
 .navbar{
     height: 5rem;
     background-color: white;
@@ -16,7 +23,19 @@ body{
 .airbnb{
     font-size: 2rem;
     color: #fe424d;
-}   
+} 
+
+/* index page */
+.tax-toggle{
+    width:17rem;
+    margin-left: 0 !important;
+}
+
+.display-tax{
+    display: flex;
+    justify-content: center;
+}
+
 
 /* footer */
 .f-terms a{
@@ -63,11 +82,18 @@ body{
 }
 .listing-link{
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .card-hover:hover{
     opacity: 0.8;
 }
+
+.card{
+    width: 35rem;
+}
+
 
 /*new page */
 .addbtn{
@@ -91,5 +117,44 @@ body{
 /* map styling */
 #map{
     height:400px;
-    width: 90vh;
+    width: 100%;
 }
+
+.map-review{
+    width: 35rem;
+}
+
+
+/* media queries */
+
+ @media((min-width:500px) and (max-width:600px)){
+    .fullcard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 100%;
+    }
+    .map-review{
+        width: 28rem;
+    }
+} 
+
+@media((min-width:300px) and (max-width:500px)){
+    .fullcard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 80%;
+    }
+    .map-review{
+        width: 20rem;
+    }
+    
+    .review-card{
+       width:60% !important ;
+    }
+} 

@@ -67,14 +67,17 @@
           <div><i class="fa-solid fa-tractor"></i></div>
           <p>Farms</p>
         </div> 
-
-        <div class="tax-toggle">
-            <div class="form-check-reverse form-switch">
-               <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-               <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
-            </div>
-        </div>
   </div>
+
+  <div class="display-tax">
+    <div class="tax-toggle">
+          <div class="form-check-reverse form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+          </div>
+      </div>
+  </div>
+
 <div class="maincard mt-3">
     <%for(data of alldata) { %>
         <a href="/listings/<%= data._id %>" class="listing-link">

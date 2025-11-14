@@ -114,6 +114,33 @@ body{
     display: flex;
 }
 
+/* search page */
+.emoji{
+    font-size: 10rem;
+}
+
+.empty-state{
+    text-align: center;
+}
+
+.browse-listings {
+  background: none;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  background-color: black;
+  border: 1px solid white;
+
+}
+
+.browse-listings a{
+    text-decoration: none;
+    color: beige
+}
+
+.browse-listings:active{
+    background-color: rgb(75, 74, 74);
+}
+
 /* map styling */
 #map{
     height:400px;

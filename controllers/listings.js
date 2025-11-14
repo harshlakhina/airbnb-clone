@@ -85,4 +85,17 @@ module.exports.destroyListing=async(req,res)=>{
      res.redirect("/listings");
 };
 
+module.exports.searchListing= async (req,res)=>{
+    let {location}=req.query;
+    location=location.trim();
+    const regex=new RegExp(location,"i");
+    let alldata=await Listing.find({location:regex});
+    
+    if(alldata.length) res.render("./listings/index.ejs",{alldata});
+    else res.render("./listings/search.ejs",{location});
+
+}
+
+
+
  

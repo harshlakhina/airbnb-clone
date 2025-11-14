@@ -18,6 +18,9 @@ router
 // new route
 router.get("/new",isloggedIn,listingcontroller.renderNewForm);
 
+// search route
+router.get("/search",WrapAsync(listingcontroller.searchListing));
+
 
 // show , update and delete route
 router
